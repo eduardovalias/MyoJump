@@ -31,7 +31,7 @@ public class Capi : MonoBehaviour
         //gravity = (2*maxHeight)/Mathf.Pow(timeToPeak, 2) * 2;
         //jumpSpeed = gravity*timeToPeak;
         
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         groundPosition = transform.position.y;
         rb = this.GetComponent<Rigidbody2D>();
     }
