@@ -25,6 +25,10 @@ public class Capi : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public GameObject jumpText;
+    public int jumps;
+    public bool finished = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +48,15 @@ public class Capi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(jumpText.GetComponent<TMP_Text>().text != "")
+        {
+            jumps = int.Parse(jumpText.GetComponent<TMP_Text>().text);
+        }
+        else
+        {
+            jumps = 10;
+        }
+
         yVelocity += gravity*Time.deltaTime*Vector2.down;
 
         if(transform.position.y <= groundPosition){
@@ -53,22 +66,37 @@ public class Capi : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space)&& isGrounded && isGrounded2){
             yVelocity = jumpSpeed*Vector2.up;
+            jumps -= 1;
+            jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
         }
         
         transform.position += (Vector3)yVelocity*Time.deltaTime;
 
-        if(Time.timeScale == 0 && Input.GetKeyDown(KeyCode.R))
+        if(jumps <= 0 && !isGrounded2)
         {
-            SceneManager.LoadScene(0);
+            finished = true;
         }
+
+        if(finished && isGrounded2)
+        {
+            restartText.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        //if(Time.timeScale == 0 && Input.GetKeyDown(KeyCode.R))
+        //{
+        //    SceneManager.LoadScene(0);
+        //}
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Obstacle")
         {
-            restartText.SetActive(true);
-            Time.timeScale = 0;
+            jumps += 1;
+            jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
+            //restartText.SetActive(true);
+            //Time.timeScale = 0;
         }
     }
 }
