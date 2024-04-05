@@ -29,9 +29,24 @@ public class Capi : MonoBehaviour
     public int jumps;
     public bool finished = false;
 
+    private EnemySpawn enemySpawn;
+    public GameObject enemy;
+    bool hasChanged = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        if(jumpText.GetComponent<TMP_Text>().text != "")
+        {
+            jumps = int.Parse(jumpText.GetComponent<TMP_Text>().text);
+        }
+        else
+        {
+            jumps = 10;
+        }
+
+
+        enemySpawn = Camera.main.GetComponent<EnemySpawn>();
         //gravity = (2*maxHeight)/Mathf.Pow(timeToPeak, 2) * 2;
         //jumpSpeed = gravity*timeToPeak;
         
@@ -48,14 +63,23 @@ public class Capi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(jumpText.GetComponent<TMP_Text>().text != "")
-        {
-            jumps = int.Parse(jumpText.GetComponent<TMP_Text>().text);
+
+        foreach (GameObject enemy in enemySpawn.enemies){ // Access the enemies list from the EnemySpawn script
+            hasChanged = false;
+
+            if(enemy.transform.position.x < transform.position.x){
+                jumps -= 1;
+                hasChanged = true;
+                jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
+                enemySpawn.enemies.Remove(enemy); // Remove the enemy from the list
+                break;
+            }
         }
-        else
-        {
-            jumps = 10;
-        }
+
+
+
+
+        
 
         yVelocity += gravity*Time.deltaTime*Vector2.down;
 
@@ -66,8 +90,6 @@ public class Capi : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space)&& isGrounded && isGrounded2){
             yVelocity = jumpSpeed*Vector2.up;
-            jumps -= 1;
-            jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
         }
         
         transform.position += (Vector3)yVelocity*Time.deltaTime;
@@ -93,8 +115,13 @@ public class Capi : MonoBehaviour
     {
         if(col.tag == "Obstacle")
         {
+            //hasPassed = false;
             jumps += 1;
-            jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
+            if(hasChanged){
+                jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
+                hasChanged = false;
+            }
+            //jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
             //restartText.SetActive(true);
             //Time.timeScale = 0;
         }

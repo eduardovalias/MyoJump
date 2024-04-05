@@ -1601,6 +1601,7 @@ MonoBehaviour:
   planeInterval: 8
   instantiateTime: 0
   intervalVariation: 0.5
+  enemies: []
 --- !u!1 &542450597
 GameObject:
   m_ObjectHideFlags: 0
@@ -4363,6 +4364,7 @@ MonoBehaviour:
   jumpText: {fileID: 1001964931}
   jumps: 0
   finished: 0
+  enemy: {fileID: 519420028}
 --- !u!212 &2107888709
 SpriteRenderer:
   m_ObjectHideFlags: 0

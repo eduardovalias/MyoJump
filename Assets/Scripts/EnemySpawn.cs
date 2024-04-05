@@ -13,6 +13,8 @@ public class EnemySpawn : MonoBehaviour
     public float planeInterval = 4; //em segundos
     public float instantiateTime = 0;
     public float intervalVariation = 0.5f;
+
+    public List<GameObject> enemies = new List<GameObject>();   
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,10 @@ public class EnemySpawn : MonoBehaviour
             obj.AddComponent<BoxCollider2D>();
             //instancia o objeto
             instantiateTime = Time.time + Random.Range(objectInterval - intervalVariation, objectInterval + intervalVariation);
+
+            enemies.Add(obj);
+
+            
             if(obj.transform.position.x <= -12)
                 Destroy(obj.gameObject);
         }
