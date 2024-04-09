@@ -8,11 +8,16 @@ public class menuScript : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject optionsMenu;
+    public GameObject menus;
     public GameObject jumpText;
     public GameObject jumpObj;
     public TMP_InputField speedField;
     public TMP_InputField jumpField;
     float timescl;
+    public AudioSource audioSource;
+    public AudioClip audioClip; //game music
+    public AudioClip clickClip; //click sound
+    public Capi capi;
 
     public void PlayGame()
     {
@@ -23,9 +28,26 @@ public class menuScript : MonoBehaviour
 
         if(jumpField.text == "")
         {
+            capi.jumps = 10;
             jumpText.GetComponent<TMP_Text>().text = "10";
         }
+        else
+        {
+            capi.jumps = int.Parse(jumpField.text);
+        }
+        
 
+        //play click sound
+        audioSource.clip = clickClip;
+        audioSource.loop = false;
+        audioSource.Play();
+
+        //play game audio on loop
+        audioSource.clip = audioClip;
+        audioSource.loop = true;
+        audioSource.Play();
+
+        menus.SetActive(false);
         mainMenu.SetActive(false);
         optionsMenu.SetActive(false);
         jumpObj.SetActive(true);
@@ -34,12 +56,20 @@ public class menuScript : MonoBehaviour
 
     public void Options()
     {
+        audioSource.clip = clickClip;
+        audioSource.loop = false;
+        audioSource.Play();
+
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
 
     public void Done()
     {
+        audioSource.clip = clickClip;
+        audioSource.loop = false;
+        audioSource.Play();
+
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
 

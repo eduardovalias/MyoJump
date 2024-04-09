@@ -36,16 +36,6 @@ public class Capi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(jumpText.GetComponent<TMP_Text>().text != "")
-        {
-            jumps = int.Parse(jumpText.GetComponent<TMP_Text>().text);
-        }
-        else
-        {
-            jumps = 10;
-        }
-
-
         enemySpawn = Camera.main.GetComponent<EnemySpawn>();
         //gravity = (2*maxHeight)/Mathf.Pow(timeToPeak, 2) * 2;
         //jumpSpeed = gravity*timeToPeak;
