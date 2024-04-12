@@ -32,6 +32,16 @@ public class Capi : MonoBehaviour
     private EnemySpawn enemySpawn;
     public GameObject enemy;
     bool hasChanged = false;
+    public GameObject relGenerator;
+
+    //variables of relGenerator
+    private int totalJumps = 0; 
+    private int totalCollisions = 0; 
+    private float timeToComplete = 0; //how to add timer to this?
+    private int maxSequence = 0; 
+    private bool justHit = false;
+    private float speedConf = 0; 
+    private int jumpsConf = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +90,7 @@ public class Capi : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space)&& isGrounded && isGrounded2){
             yVelocity = jumpSpeed*Vector2.up;
+            totalJumps++;
         }
         
         transform.position += (Vector3)yVelocity*Time.deltaTime;
@@ -91,8 +102,10 @@ public class Capi : MonoBehaviour
 
         if(finished && isGrounded2)
         {
+            relGenerator.GetComponent<relGenerator>().CreateRelFile(totalJumps, totalCollisions, timeToComplete, maxSequence, speedConf, jumpsConf);
             restartText.SetActive(true);
             Time.timeScale = 0;
+            enabled = false;
         }
 
         //if(Time.timeScale == 0 && Input.GetKeyDown(KeyCode.R))
@@ -105,7 +118,8 @@ public class Capi : MonoBehaviour
     {
         if(col.tag == "Obstacle")
         {
-            //hasPassed = false;
+            justHit = true; //related to maxSequence
+            totalCollisions++;
             jumps += 1;
             if(hasChanged){
                 jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
