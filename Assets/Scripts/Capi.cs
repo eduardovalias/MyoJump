@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Capi : MonoBehaviour
 {
@@ -37,7 +38,10 @@ public class Capi : MonoBehaviour
     //variables of relGenerator
     private int totalJumps = 0; 
     private int totalCollisions = 0; 
-    private double timeToComplete = 0; //how to add timer to this?
+    private double timeToComplete; //how to add timer to this?
+    private DateTime startTime;
+    private DateTime endTime;
+    public TimeManager timeManager;
     private int maxSequence = 0; 
     private int actualSequence = 0;
     private bool justHit = false;
@@ -56,9 +60,9 @@ public class Capi : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
     }
     
-    public void SetStartTime(double time)
+    public void SetStartTime(DateTime time)
     {
-        timeToComplete = time;
+        startTime = time;
     }
 
     void FixedUpdate()
@@ -123,6 +127,8 @@ public class Capi : MonoBehaviour
 
         if(finished && isGrounded2)
         {
+            endTime = timeManager.GetTime();
+            timeToComplete = (endTime - startTime).TotalSeconds;
             relGenerator.GetComponent<relGenerator>().CreateRelFile(totalJumps, totalCollisions, timeToComplete, maxSequence, speedConf, jumpsConf);
             restartText.SetActive(true);
             Time.timeScale = 0;

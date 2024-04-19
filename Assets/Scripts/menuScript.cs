@@ -20,6 +20,8 @@ public class menuScript : MonoBehaviour
     public AudioClip clickClip; //click sound
     public Capi capi;
     public relGenerator rel;
+    private DateTime startTime;
+    public TimeManager timeManager;
 
     public void PlayGame()
     {
@@ -48,8 +50,8 @@ public class menuScript : MonoBehaviour
                 rel.SetConfs(int.Parse(jumpField.text), timescl);
         }
         
-        DateTime currentTime = DateTime.Now;
-        capi.SetStartTime(Math.Round(((DateTimeOffset)currentTime).ToUnixTimeMilliseconds() / 1000.0, 2));
+        startTime = timeManager.GetTime();
+        capi.SetStartTime(startTime);
 
         //play click sound
         audioSource.clip = clickClip;

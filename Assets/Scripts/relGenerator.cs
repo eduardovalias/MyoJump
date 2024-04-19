@@ -9,6 +9,7 @@ public class relGenerator : MonoBehaviour
     public GameObject capi;
     private int jumps = 0;
     private float speed = 0.0f;
+    public TimeManager timeManager;
 
     public void CreateRelFile(int jumps, int collisions, double time, int maxSequence, float speed, int jumpsConf)
     {
@@ -17,20 +18,29 @@ public class relGenerator : MonoBehaviour
         jumpsConf = this.jumps;
         string path = Application.dataPath + "/../Resultados/Relatorio.txt";
         
-        if(!File.Exists(path))
+        string oldContent = "";
+        if(File.Exists(path))
         {
-            File.WriteAllText(path, "Relatório do paciente \n\n\n");
+            oldContent = File.ReadAllText(path);
+           // File.WriteAllText(path, "Relatório do paciente \n\n\n");
         }
 
         string content = "[" + currentTime.ToString() + "] \n" +
                          "Número de colisões: " + collisions + "\n" +
-                         "Tempo para conclusão da atividade: " + time + "\n" +
+                         "Tempo para conclusão da atividade: " + timeManager.FormatTime(time) + "\n" +
                          "Maior sequência de acertos: " + maxSequence + "\n" +
                          "Número de saltos dados pelo paciente: " + jumps + "\n" +
                          "Velocidade configurada na fase: " + speed + "% \n" +
                          "Número de saltos configurado na fase: " + jumpsConf + "\n\n\n";
+
+        string title = "Relatório do paciente \n\n\n";
+        if (!oldContent.StartsWith(title))
+        {
+            oldContent = title + oldContent;
+        }
                 
-        File.AppendAllText(path, content);
+        File.WriteAllText(path, oldContent.Replace(title, title + content));
+        //File.AppendAllText(path, content);
     }
 
     public void SetConfs(int jumps, float speed)
