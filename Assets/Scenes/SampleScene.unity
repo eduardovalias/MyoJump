@@ -1994,6 +1994,7 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   clickClip: {fileID: 0}
   capi: {fileID: 0}
+  rel: {fileID: 0}
 --- !u!1 &631352564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,6 +3265,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 185924370233856448052b239e15d617, type: 3}
   clickClip: {fileID: 8300000, guid: 0c0cb4fe82332144d9dd143b55c902a9, type: 3}
   capi: {fileID: 2107888708}
+  rel: {fileID: 2107888715}
 --- !u!82 &1185052732
 AudioSource:
   m_ObjectHideFlags: 0

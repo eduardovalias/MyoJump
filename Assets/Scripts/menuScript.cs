@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class menuScript : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class menuScript : MonoBehaviour
     public AudioClip audioClip; //game music
     public AudioClip clickClip; //click sound
     public Capi capi;
+    public relGenerator rel;
 
     public void PlayGame()
     {
@@ -30,12 +32,24 @@ public class menuScript : MonoBehaviour
         {
             capi.jumps = 10;
             jumpText.GetComponent<TMP_Text>().text = "10";
+
+            if(timescl <=0)
+                rel.SetConfs(10, 1.0f);
+            else
+                rel.SetConfs(10, timescl);
         }
         else
         {
             capi.jumps = int.Parse(jumpField.text);
+            
+            if(timescl <=0)
+                rel.SetConfs(int.Parse(jumpField.text), 1.0f);
+            else
+                rel.SetConfs(int.Parse(jumpField.text), timescl);
         }
         
+        DateTime currentTime = DateTime.Now;
+        capi.SetStartTime(Math.Round(((DateTimeOffset)currentTime).ToUnixTimeMilliseconds() / 1000.0, 2));
 
         //play click sound
         audioSource.clip = clickClip;

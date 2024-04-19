@@ -37,8 +37,9 @@ public class Capi : MonoBehaviour
     //variables of relGenerator
     private int totalJumps = 0; 
     private int totalCollisions = 0; 
-    private float timeToComplete = 0; //how to add timer to this?
+    private double timeToComplete = 0; //how to add timer to this?
     private int maxSequence = 0; 
+    private int actualSequence = 0;
     private bool justHit = false;
     private float speedConf = 0; 
     private int jumpsConf = 0;
@@ -53,6 +54,11 @@ public class Capi : MonoBehaviour
         Time.timeScale = 0;
         groundPosition = transform.position.y;
         rb = this.GetComponent<Rigidbody2D>();
+    }
+    
+    public void SetStartTime(double time)
+    {
+        timeToComplete = time;
     }
 
     void FixedUpdate()
@@ -72,6 +78,21 @@ public class Capi : MonoBehaviour
                 hasChanged = true;
                 jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
                 enemySpawn.enemies.Remove(enemy); // Remove the enemy from the list
+
+                actualSequence++;
+                if(!justHit)
+                {
+                    if(maxSequence < actualSequence)
+                    {
+                        maxSequence = actualSequence;
+                    }
+                }
+                else
+                {
+                    actualSequence--;
+                    actualSequence = 0;
+                    justHit = false;
+                }
                 break;
             }
         }
