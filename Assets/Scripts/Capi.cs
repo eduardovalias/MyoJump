@@ -47,6 +47,8 @@ public class Capi : MonoBehaviour
     private bool justHit = false;
     private float speedConf = 0; 
     private int jumpsConf = 0;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,8 @@ public class Capi : MonoBehaviour
         Time.timeScale = 0;
         groundPosition = transform.position.y;
         rb = this.GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
     }
     
     public void SetStartTime(DateTime time)
@@ -145,6 +149,7 @@ public class Capi : MonoBehaviour
     {
         if(col.tag == "Obstacle")
         {
+            audioSource.Play();
             justHit = true; //related to maxSequence
             totalCollisions++;
             jumps += 1;
