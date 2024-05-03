@@ -49,6 +49,7 @@ public class Capi : MonoBehaviour
     private int jumpsConf = 0;
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public GameObject colScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -139,16 +140,22 @@ public class Capi : MonoBehaviour
             enabled = false;
         }
 
-        //if(Time.timeScale == 0 && Input.GetKeyDown(KeyCode.R))
-        //{
-        //    SceneManager.LoadScene(0);
-        //}
+        if(colScreen != null)
+        {
+            if(colScreen.GetComponent<Image>().color.a > 0)
+            {
+                var colour = colScreen.GetComponent<Image>().color;
+                colour.a -= 0.001f;
+                colScreen.GetComponent<Image>().color = colour;
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Obstacle")
         {
+            wasHit();
             audioSource.Play();
             justHit = true; //related to maxSequence
             totalCollisions++;
@@ -161,5 +168,12 @@ public class Capi : MonoBehaviour
             //restartText.SetActive(true);
             //Time.timeScale = 0;
         }
+    }
+
+    public void wasHit()
+    {
+        var colour = colScreen.GetComponent<Image>().color;
+        colour.a = 0.5f;
+        colScreen.GetComponent<Image>().color = colour;
     }
 }
