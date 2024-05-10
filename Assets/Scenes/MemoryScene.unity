@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 24620469}
   - component: {fileID: 24620468}
   - component: {fileID: 24620470}
+  - component: {fileID: 24620471}
   m_Layer: 5
   m_Name: card (6)
   m_TagString: Untagged
@@ -243,7 +244,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 24620468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 24620471}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &24620471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24620466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
 --- !u!1 &40506522
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +284,7 @@ GameObject:
   - component: {fileID: 40506525}
   - component: {fileID: 40506524}
   - component: {fileID: 40506526}
+  - component: {fileID: 40506527}
   m_Layer: 5
   m_Name: card (5)
   m_TagString: Untagged
@@ -364,7 +393,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 40506524}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40506527}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &40506527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40506522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
 --- !u!1 &86262179
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +517,7 @@ GameObject:
   - component: {fileID: 216000675}
   - component: {fileID: 216000674}
   - component: {fileID: 216000676}
+  - component: {fileID: 216000677}
   m_Layer: 5
   m_Name: card (4)
   m_TagString: Untagged
@@ -569,7 +626,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 216000674}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 216000677}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &216000677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216000672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
 --- !u!1 &249620467
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +666,7 @@ GameObject:
   - component: {fileID: 249620470}
   - component: {fileID: 249620469}
   - component: {fileID: 249620471}
+  - component: {fileID: 249620472}
   m_Layer: 5
   m_Name: card (1)
   m_TagString: Untagged
@@ -690,7 +775,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 249620469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 249620472}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &249620472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249620467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
 --- !u!1 &451100593
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,8 +1089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -179.55043, y: 188}
-  m_SizeDelta: {x: 176.8992, y: 46.013}
+  m_AnchoredPosition: {x: -187.79, y: 188}
+  m_SizeDelta: {x: 201.32, y: 46.017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113471053
 MonoBehaviour:
@@ -1405,6 +1517,7 @@ GameObject:
   - component: {fileID: 1451711939}
   - component: {fileID: 1451711938}
   - component: {fileID: 1451711940}
+  - component: {fileID: 1451711941}
   m_Layer: 5
   m_Name: card (7)
   m_TagString: Untagged
@@ -1513,7 +1626,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1451711938}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1451711941}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1451711941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451711936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
 --- !u!1 &1560081970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1666,7 @@ GameObject:
   - component: {fileID: 1560081973}
   - component: {fileID: 1560081972}
   - component: {fileID: 1560081974}
+  - component: {fileID: 1560081975}
   m_Layer: 5
   m_Name: card (2)
   m_TagString: Untagged
@@ -1634,7 +1775,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1560081972}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560081975}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1560081975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560081970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
 --- !u!1 &1624952230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1815,7 @@ GameObject:
   - component: {fileID: 1624952233}
   - component: {fileID: 1624952232}
   - component: {fileID: 1624952234}
+  - component: {fileID: 1624952235}
   m_Layer: 5
   m_Name: card (3)
   m_TagString: Untagged
@@ -1755,7 +1924,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1624952232}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1624952235}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1624952235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624952230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
 --- !u!1 &1895756728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,8 +2244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -336.49, y: 188}
-  m_SizeDelta: {x: 120.2111, y: 46.0106}
+  m_AnchoredPosition: {x: -347.8013, y: 188}
+  m_SizeDelta: {x: 97.5885, y: 46.015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040849456
 MonoBehaviour:
@@ -2071,7 +2267,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tempo
+  m_text: 'Tempo:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -2134,7 +2330,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -9.049072, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2160,6 +2356,7 @@ GameObject:
   - component: {fileID: 2097779818}
   - component: {fileID: 2097779817}
   - component: {fileID: 2097779819}
+  - component: {fileID: 2097779820}
   m_Layer: 5
   m_Name: card
   m_TagString: Untagged
@@ -2268,4 +2465,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2097779817}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2097779820}
+        m_TargetAssemblyTypeName: cardManager, Assembly-CSharp
+        m_MethodName: flipcard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2097779820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097779815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803fb89807159f14ba98063a379f7e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _cardValue: 0
+  _initialized: 0
