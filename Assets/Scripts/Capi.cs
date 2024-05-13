@@ -135,9 +135,10 @@ public class Capi : MonoBehaviour
             endTime = timeManager.GetTime();
             timeToComplete = (endTime - startTime).TotalSeconds;
             relGenerator.GetComponent<relGenerator>().CreateRelFile(totalJumps, totalCollisions, timeToComplete, maxSequence, speedConf, jumpsConf);
-            restartText.SetActive(true);
+            //restartText.SetActive(true);
             Time.timeScale = 0;
             enabled = false;
+            //SceneManager.LoadScene("Menu");
         }
 
         if(colScreen != null)
