@@ -7,7 +7,7 @@ using System;
 
 public class menuScript : MonoBehaviour
 {
-    public GameObject mainMenu;
+  /*  public GameObject mainMenu;
     public GameObject optionsMenu;
     public GameObject menus;
     public GameObject jumpText;
@@ -111,4 +111,5 @@ public class menuScript : MonoBehaviour
     {
         
     }
+    */
 }

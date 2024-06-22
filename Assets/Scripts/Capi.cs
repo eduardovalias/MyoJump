@@ -27,7 +27,7 @@ public class Capi : MonoBehaviour
     private Rigidbody2D rb;
 
     public GameObject jumpText;
-    public int jumps;
+    public static int jumps;
     public bool finished = false;
 
     private EnemySpawn enemySpawn;
@@ -58,11 +58,13 @@ public class Capi : MonoBehaviour
         //gravity = (2*maxHeight)/Mathf.Pow(timeToPeak, 2) * 2;
         //jumpSpeed = gravity*timeToPeak;
         
-        Time.timeScale = 0;
+        Time.timeScale = menu.speed;
         groundPosition = transform.position.y;
         rb = this.GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip;
+        Debug.Log(jumps);
+        jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
     }
     
     public void SetStartTime(DateTime time)
