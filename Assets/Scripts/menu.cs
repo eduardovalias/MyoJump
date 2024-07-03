@@ -14,19 +14,23 @@ public class menu : MonoBehaviour
         if(jumpField.text == "")
         {
             Capi.jumps = 10;
+            Capi.jumpsConf = 10;
         }
         else
         {
             Capi.jumps = int.Parse(jumpField.text);
+            Capi.jumpsConf = int.Parse(jumpField.text);
         }
 
         if(speedField.text == "")
         {
             speed = 1.0f;
+            Capi.speedConf = 1.0f;
         }
         else
         {
             speed = float.Parse(speedField.text) / 100;
+            Capi.speedConf = float.Parse(speedField.text) / 100;
         }
     }
 

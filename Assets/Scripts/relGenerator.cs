@@ -7,15 +7,12 @@ using System;
 public class relGenerator : MonoBehaviour
 {
     public GameObject capi;
-    private int jumps = 0;
-    private float speed = 0.0f;
     public TimeManager timeManager;
 
     public void CreateRelFile(int jumps, int collisions, double time, int maxSequence, float speed, int jumpsConf)
     {
         DateTime currentTime = DateTime.Now;
-        speed = this.speed * 100;
-        jumpsConf = this.jumps;
+        speed = speed * 100;
         string path = Application.dataPath + "/../Resultados/Relatorio.txt";
         
         string oldContent = "";
@@ -43,11 +40,11 @@ public class relGenerator : MonoBehaviour
         //File.AppendAllText(path, content);
     }
 
-    public void SetConfs(int jumps, float speed)
-    {
-        this.speed = speed;
-        this.jumps = jumps;
-    }
+   // public void SetConfs(int jumps, float speed)
+   // {
+   //     this.speed = speed;
+   //     this.jumps = jumps;
+   // }
 
     // Start is called before the first frame update
     void Start()

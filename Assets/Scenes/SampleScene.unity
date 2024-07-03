@@ -918,10 +918,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Saltos restantes
+  m_text: 'Saltos restantes:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e535760e12d6dcb4dafbdbb3a3560b47, type: 2}
-  m_sharedMaterial: {fileID: -3373510432491018722, guid: e535760e12d6dcb4dafbdbb3a3560b47, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fddb97ab7e7a43f4fa1dad0dded8c396, type: 2}
+  m_sharedMaterial: {fileID: 7613644478396326721, guid: fddb97ab7e7a43f4fa1dad0dded8c396, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4179,7 +4179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: i
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e535760e12d6dcb4dafbdbb3a3560b47, type: 2}
   m_sharedMaterial: {fileID: -3373510432491018722, guid: e535760e12d6dcb4dafbdbb3a3560b47, type: 2}

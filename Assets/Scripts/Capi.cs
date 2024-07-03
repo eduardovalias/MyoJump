@@ -45,8 +45,8 @@ public class Capi : MonoBehaviour
     private int maxSequence = 0; 
     private int actualSequence = 0;
     private bool justHit = false;
-    private float speedConf = 0; 
-    private int jumpsConf = 0;
+    public static float speedConf; 
+    public static int jumpsConf;
     public AudioSource audioSource;
     public AudioClip audioClip;
     public GameObject colScreen;
@@ -63,13 +63,8 @@ public class Capi : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip;
-        Debug.Log(jumps);
         jumpText.GetComponent<TMP_Text>().text = jumps.ToString();
-    }
-    
-    public void SetStartTime(DateTime time)
-    {
-        startTime = time;
+        startTime = timeManager.GetTime();
     }
 
     void FixedUpdate()
