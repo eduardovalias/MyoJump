@@ -12,7 +12,6 @@ public class relGenerator : MonoBehaviour
     public void CreateRelFile(int jumps, int collisions, double time, int maxSequence, float speed, int jumpsConf)
     {
         DateTime currentTime = DateTime.Now;
-        speed = speed * 100;
         string path = Application.dataPath + "/../Resultados/Relatorio.txt";
         
         string oldContent = "";
@@ -27,7 +26,7 @@ public class relGenerator : MonoBehaviour
                          "Tempo para conclusão da atividade: " + timeManager.FormatTime(time) + "\n" +
                          "Maior sequência de acertos: " + maxSequence + "\n" +
                          "Número de saltos dados pelo paciente: " + jumps + "\n" +
-                         "Velocidade configurada na fase: " + speed + "% \n" +
+                         "Velocidade configurada na fase: " + speed + "\n" +
                          "Número de saltos configurado na fase: " + jumpsConf + "\n\n\n";
 
         string title = "Relatório do paciente \n\n\n";

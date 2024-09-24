@@ -7,11 +7,12 @@ TagManager:
   - Obstacle
   - Destroyer
   - Manager
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground

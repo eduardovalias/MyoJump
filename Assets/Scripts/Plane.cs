@@ -8,8 +8,8 @@ public class Plane : MonoBehaviour
 
     public float speed;
 
-    Vector2 endPosition = new Vector2(12.3f, 2.58f);
-    Vector2 startPosition = new Vector2(-12.3f, 2.58f);
+    Vector2 endPosition = new Vector2(12.3f, 3.58f);
+    Vector2 startPosition = new Vector2(-12.3f, 3.58f);
     // Start is called before the first frame update
     void Start()
     {

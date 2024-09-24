@@ -23,8 +23,29 @@ public class menu : MonoBehaviour
             Capi.jumpsConf = int.Parse(jumpField.text);
         }
         
-        speed = (float)speedSlider.GetComponent<UnityEngine.UI.Slider>().value;
-        Capi.speedConf = speed;
+        switch(speedSlider.GetComponent<UnityEngine.UI.Slider>().value)
+        {
+            case 1:
+                speed = 0.75f;
+                break;
+            case 2:
+                speed = 1.0f;
+                break;
+            case 3:
+                speed = 1.25f;
+                break;
+            case 4:
+                speed = 1.5f;
+                break;
+            case 5:
+                speed = 2.5f;
+                break;
+            default:
+                speed = 1.0f;
+                break;
+        }
+
+        Capi.speedConf = speedSlider.GetComponent<UnityEngine.UI.Slider>().value;
 
        // if(speedField.text == "")
        // {
