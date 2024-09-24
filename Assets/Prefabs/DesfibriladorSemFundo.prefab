@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4772443971758963815}
   - component: {fileID: 4772443971758963814}
   - component: {fileID: 4772443971758963813}
-  - component: {fileID: 5979366177614039411}
+  - component: {fileID: 3359428394562086450}
   m_Layer: 8
   m_Name: DesfibriladorSemFundo
   m_TagString: Obstacle
@@ -99,29 +99,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
---- !u!61 &5979366177614039411
-BoxCollider2D:
+--- !u!65 &3359428394562086450
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4772443971758963812}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.077454746, y: -0.56431353}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.99, y: 5}
-    newSize: {x: 4.99, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.400795, y: 1.746897}
-  m_EdgeRadius: 0
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

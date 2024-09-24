@@ -28,7 +28,9 @@ public class EnemySpawn : MonoBehaviour
 
             GameObject obj = Instantiate(capiPrefabRef, new Vector3(7,-2.59f), Quaternion.identity);
             obj.GetComponent<SpriteRenderer>().sprite = engbSprites[Random.Range(0, engbSprites.Length)];
-            obj.AddComponent<BoxCollider2D>();
+
+            BoxCollider boxCollider = obj.AddComponent<BoxCollider>();
+            boxCollider.isTrigger = true;
 
             // Add the Obstacle tag to the enemy
             obj.tag = "Obstacle";

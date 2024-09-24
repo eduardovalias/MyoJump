@@ -14,13 +14,13 @@ public class menu : MonoBehaviour
     {
         if(jumpField.text == "")
         {
-            Capi.jumps = 10;
-            Capi.jumpsConf = 10;
+            capiUpdated.jumps = 10;
+            capiUpdated.jumpsConf = 10;
         }
         else
         {
-            Capi.jumps = int.Parse(jumpField.text);
-            Capi.jumpsConf = int.Parse(jumpField.text);
+            capiUpdated.jumps = int.Parse(jumpField.text);
+            capiUpdated.jumpsConf = int.Parse(jumpField.text);
         }
         
         switch(speedSlider.GetComponent<UnityEngine.UI.Slider>().value)
@@ -45,17 +45,17 @@ public class menu : MonoBehaviour
                 break;
         }
 
-        Capi.speedConf = speedSlider.GetComponent<UnityEngine.UI.Slider>().value;
+        capiUpdated.speedConf = speedSlider.GetComponent<UnityEngine.UI.Slider>().value;
 
        // if(speedField.text == "")
        // {
        //     speed = 1.0f;
-       //     Capi.speedConf = 1.0f;
+       //     capiUpdated.speedConf = 1.0f;
        // }
        // else
        // {
        //     speed = float.Parse(speedField.text) / 100;
-       //     Capi.speedConf = float.Parse(speedField.text) / 100;
+       //     capiUpdated.speedConf = float.Parse(speedField.text) / 100;
        // }
     }//
 

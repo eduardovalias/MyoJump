@@ -5860,10 +5860,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 185924370233856448052b239e15d617, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5952,7 +5952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107888707}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 749bfc97157060145abb09304b968b2c, type: 3}
   m_Name: 
@@ -6069,6 +6069,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 10
   jumpForce: 10
+  colScreen: {fileID: 850272870}
+  audioSource: {fileID: 2107888716}
+  audioClip: {fileID: 8300000, guid: e20ed106de1d02744b4ecbbb09e74067, type: 3}
+  timeManager: {fileID: 519420035}
+  jumpText: {fileID: 1001964931}
+  finished: 0
+  enemy: {fileID: 519420028}
+  relGenerator: {fileID: 2107888707}
 --- !u!143 &2107888718
 CharacterController:
   m_ObjectHideFlags: 0
