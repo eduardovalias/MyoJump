@@ -46,28 +46,10 @@ public class menu : MonoBehaviour
         }
 
         capiUpdated.speedConf = speedSlider.GetComponent<UnityEngine.UI.Slider>().value;
-
-       // if(speedField.text == "")
-       // {
-       //     speed = 1.0f;
-       //     capiUpdated.speedConf = 1.0f;
-       // }
-       // else
-       // {
-       //     speed = float.Parse(speedField.text) / 100;
-       //     capiUpdated.speedConf = float.Parse(speedField.text) / 100;
-       // }
-    }//
-
-    // Start is called before the first frame update
-    void Start()    
-    {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void QuitGame()
     {
-        
+        Application.Quit();
     }
 }

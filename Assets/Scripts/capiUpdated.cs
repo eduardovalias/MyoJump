@@ -111,7 +111,6 @@ public class capiUpdated : MonoBehaviour
 
 
 
-
         moveDirection += Vector3.down * gravity * Time.deltaTime;
 
         if(player.isGrounded)
@@ -126,8 +125,8 @@ public class capiUpdated : MonoBehaviour
                 endTime = timeManager.GetTime();
                 timeToComplete = (endTime - startTime).TotalSeconds;
                 relGenerator.GetComponent<relGenerator>().CreateRelFile(totalJumps, totalCollisions, timeToComplete, maxSequence, speedConf, jumpsConf);
-                Time.timeScale = 0;
                 enabled = false;
+                SceneManager.LoadScene("MemoryScene");
             }
 
             moveDirection = Vector3.down;
@@ -140,7 +139,10 @@ public class capiUpdated : MonoBehaviour
             }
         }
 
-        player.Move(moveDirection * Time.deltaTime);
+        if(Time.timeScale < 1)
+            player.Move(moveDirection * Time.unscaledDeltaTime);
+        else
+            player.Move(moveDirection * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider hit)
