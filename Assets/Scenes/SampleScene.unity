@@ -1658,12 +1658,12 @@ MonoBehaviour:
   - {fileID: 316538606, guid: cde0d3aefce263745b1b55571a3c1304, type: 3}
   - {fileID: -1123331189, guid: af08601cedbc87746a31498b9efc3e36, type: 3}
   - {fileID: -2069668298, guid: b758c2204ae986241a64a2f781a2ca16, type: 3}
-  - {fileID: 21300000, guid: b489e1ba413b4954cab0d6b8dafbd8e5, type: 3}
-  - {fileID: 21300000, guid: b242ebf9033b3bd4a94337ca6789b862, type: 3}
+  - {fileID: 21300000, guid: 26b9e385255428d43a71d3eba40d4b58, type: 3}
+  - {fileID: 21300000, guid: 0a3aeeea9523ebf4eba4d72ae8ec1c6f, type: 3}
   - {fileID: 1631100469, guid: c6277ad6390bb154ead5d2150e6fd1b2, type: 3}
   - {fileID: -1105058661, guid: 35710623a7964484f9bc31776702649f, type: 3}
-  - {fileID: 21300000, guid: 5dca7ded379e7914da2deb9c8eb737cb, type: 3}
-  - {fileID: 21300000, guid: 5a79d018803026b4ab2811b2e8b2e979, type: 3}
+  - {fileID: 21300000, guid: 6912190165e157445bb063c21da35a4f, type: 3}
+  - {fileID: 21300000, guid: 97b1db6c9ec32194a9c13505b2cffadd, type: 3}
   capiPrefabRef: {fileID: 4772443971758963812, guid: 48341c8dd9c6e274b88fec6cf427df17, type: 3}
   aviao: {fileID: 0}
   objectInterval: 4

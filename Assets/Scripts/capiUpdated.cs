@@ -102,7 +102,7 @@ public class capiUpdated : MonoBehaviour
             if(colScreen.GetComponent<Image>().color.a > 0)
             {
                 var colour = colScreen.GetComponent<Image>().color;
-                colour.a -= 0.001f;
+                colour.a -= 0.01f;
                 colScreen.GetComponent<Image>().color = colour;
             }
         }
@@ -125,7 +125,6 @@ public class capiUpdated : MonoBehaviour
                 endTime = timeManager.GetTime();
                 timeToComplete = (endTime - startTime).TotalSeconds;
                 relGenerator.GetComponent<relGenerator>().CreateRelFile(totalJumps, totalCollisions, timeToComplete, maxSequence, speedConf, jumpsConf);
-                enabled = false;
                 SceneManager.LoadScene("MemoryScene");
             }
 

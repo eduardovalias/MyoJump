@@ -12,8 +12,9 @@ public class relGenerator : MonoBehaviour
     public void CreateRelFile(int jumps, int collisions, double time, int maxSequence, float speed, int jumpsConf)
     {
         DateTime currentTime = DateTime.Now;
-        string path = Application.dataPath + "/../Resultados/Relatorio.txt";
-        
+
+        string path = Path.GetDirectoryName(Application.dataPath) + "/Relatorio.txt";
+
         string oldContent = "";
         if(File.Exists(path))
         {

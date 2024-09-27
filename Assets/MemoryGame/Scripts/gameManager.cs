@@ -14,6 +14,10 @@ public class gameManager : MonoBehaviour
 	private bool _init  = false;
 	private int _matches = 4;
 
+	void Start (){
+		Time.timeScale = 1.0f;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (!_init)
