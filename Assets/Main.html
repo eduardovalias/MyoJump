@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório do Paciente - MyoJump</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Relatório do Paciente - MyoJump</h1>
+
+    <div class="dropdown-container">
+        <label for="dropdownDate">Selecione a data:</label>
+        <select id="dropdownDate">
+            <option value="">Selecione a data</option>
+        </select>
+    </div>
+    
+    <div class="dropdown-container">
+        <label for="dropdownTime">Selecione a hora:</label>
+        <select id="dropdownTime">
+            <option value="">Selecione a hora</option>
+        </select>
+    </div>
+
+    <!-- Contêiner para os gráficos -->
+    <div class="chart-container">
+        <div class="line-pie-container" id="linePieContainer">
+            <canvas id="lineChart" style="display: none;"></canvas>
+            <canvas id="pieChart" style="display: none;"></canvas>
+        </div>
+        <div class="bar-pie-container" id="barPieContainer">
+            <canvas id="barChart"></canvas>
+            <canvas id="pieChartForBar"></canvas> <!-- Novo gráfico de pizza para hora específica -->
+        </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d3a;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.dropdown-container {
+    width: 50%;
+    margin: 20px auto;
+}
+
+#dropdownDate, #dropdownTime {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Permite que os contêineres de gráficos fiquem um abaixo do outro */
+    align-items: center;
+    margin: 0 auto;
+}
+
+.line-pie-container,
+.bar-pie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+#lineChart,
+#barChart {
+    width: 70%; /* Mantém a proporção do gráfico de linha/barras */
+    max-height: 250px;
+}
+
+#pieChart,
+#pieChartForBar {
+    width: 25%; /* Mantém a proporção do gráfico de pizza */
+    max-height: 250px;
+}   
